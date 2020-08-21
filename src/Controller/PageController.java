@@ -1,3 +1,5 @@
+package Controller;
+
 public interface ControllerInterface {
     void backToHomePage();
     void fileChooser();
