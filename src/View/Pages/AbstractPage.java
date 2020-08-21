@@ -2,11 +2,11 @@ package View.Pages;
 
 import javax.swing.*;
 
-public abstract class Page {
+public abstract class AbstractPage {
     protected final String osusync = "Osu! Sync";
     JPanel pagePanel;
 
-    public Page() {
+    public AbstractPage() {
         initPage();
     }
 

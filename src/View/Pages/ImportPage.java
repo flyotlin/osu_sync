@@ -5,7 +5,7 @@ import View.ButtonListenerFactory;
 
 import javax.swing.*;
 
-public class ImportPage extends Page {
+public class ImportPage extends AbstractPage {
     private final String importStr = "匯入";
 
     public ImportPage() {

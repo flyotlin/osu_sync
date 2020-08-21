@@ -2,7 +2,7 @@ package Controller;
 
 import View.OsuSyncView;
 
-public class HomePageController extends PageController {
+public class HomePageController extends AbstractController {
 
 
     @Override

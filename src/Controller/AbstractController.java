@@ -4,7 +4,7 @@ import View.OsuSyncView;
 import View.ViewFactory;
 
 
-public abstract class PageController {
+public abstract class AbstractController {
     ViewFactory viewFactory = new ViewFactory();
 
 

@@ -1,16 +1,15 @@
 package View.Pages;
 
+import Controller.AbstractController;
 import Controller.HomePageController;
-import Controller.PageController;
 import View.ButtonListenerFactory;
 
 import javax.swing.*;
 
-public class HomePage extends Page {
+public class HomePage extends AbstractPage {
 
     public HomePage() {
         super();
-
     }
 
     @Override
@@ -26,7 +25,7 @@ public class HomePage extends Page {
         pagePanel.add(osusyncCaption);
 
 
-        PageController homePageController = new HomePageController();
+        AbstractController homePageController = new HomePageController();
         ButtonListenerFactory[] listenerFactories = {
                 new ButtonListenerFactory(homePageController, 0),
                 new ButtonListenerFactory(homePageController, 1),

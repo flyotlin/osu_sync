@@ -1,6 +1,6 @@
 package Controller;
 
-public class ExportController extends PageController {
+public class ExportController extends AbstractController {
     @Override
     public void initOsuSync() {
         throw new UnsupportedOperationException("The Operation is now unsupported");

@@ -1,6 +1,6 @@
 package View;
 
-import Controller.PageController;
+import Controller.AbstractController;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,10 +8,10 @@ import java.awt.event.ActionListener;
 public class ButtonListenerFactory implements ActionListener {
 //    Using Factory Pattern
 
-    private PageController pageController;
+    private AbstractController pageController;
     private int num;
 
-    public ButtonListenerFactory(PageController pageController, int num) {
+    public ButtonListenerFactory(AbstractController pageController, int num) {
         this.pageController = pageController;
         this.num = num;
     }

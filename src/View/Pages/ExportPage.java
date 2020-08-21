@@ -5,7 +5,7 @@ import View.ButtonListenerFactory;
 
 import javax.swing.*;
 
-public class ExportPage extends Page {
+public class ExportPage extends AbstractPage {
     private final String exportStr = "匯出";
 
     public ExportPage() {

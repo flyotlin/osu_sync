@@ -1,6 +1,6 @@
 package Controller;
 
-public class ImportController extends PageController {
+public class ImportController extends AbstractController {
 
     @Override
     public void initOsuSync() {
