@@ -1,43 +1,40 @@
-import javax.swing.*;
+package Controller;
 
-public class HomePageController implements ControllerInterface {
+import View.OsuSyncView;
 
-    @Override
-    public void backToHomePage() {
-        throw new UnsupportedOperationException();
-    }
+public class HomePageController extends PageController {
+
 
     @Override
     public void fileChooser() {
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException("The Operation is now unsupported");
     }
 
-    @Override
-    public void start() {
-        throw new UnsupportedOperationException();
-    }
 
     public void initOsuSync() {
-        System.out.println("OSU SYNC HAS BEEN INITIALIZED!");
+        throw new UnsupportedOperationException("The Operation is now unsupported");
     }
 
     public void updateOsuSync() {
-        System.out.println("OSU SYNC HAS BEEN UPDATED!");
+        throw new UnsupportedOperationException("The Operation is now unsupported");
     }
 
     public void checkOsuSync() {
-        ActivitySwitchModel.switchToCheck();
+        throw new UnsupportedOperationException("The Operation is now unsupported");
     }
 
-    public void importOsu() {
-        ActivitySwitchModel.switchToImport();
+    @Override
+    public void exportOsuSync() {
+        OsuSyncView.changePanel(viewFactory.getExportPage());
     }
 
-    public void exportOsu() {
-        ActivitySwitchModel.switchToExport();
+    @Override
+    public void importOsuSync() {
+        OsuSyncView.changePanel(viewFactory.getImportPage());
     }
 
-    public void moreAbout() {
-        ActivitySwitchModel.switchToMore();
+    @Override
+    public void moreOsuSync() {
+        throw new UnsupportedOperationException("The Operation is now unsupported");
     }
 }

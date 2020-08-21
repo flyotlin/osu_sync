@@ -1,13 +1,18 @@
+package View;
+
+import Controller.PageController;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ButtonListenerFactory implements ActionListener {
 //    Using Factory Pattern
-    private HomePageController homePageController;
+
+    private PageController pageController;
     private int num;
 
-    public ButtonListenerFactory(HomePageController homePageController, int num) {
-        this.homePageController = homePageController;
+    public ButtonListenerFactory(PageController pageController, int num) {
+        this.pageController = pageController;
         this.num = num;
     }
 
@@ -15,22 +20,28 @@ public class ButtonListenerFactory implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (num) {
             case 0:
-                homePageController.initOsuSync();
+                pageController.initOsuSync();
                 break;
             case 1:
-                homePageController.updateOsuSync();
+                pageController.updateOsuSync();
                 break;
             case 2:
-                homePageController.checkOsuSync();
+                pageController.checkOsuSync();
                 break;
             case 3:
-                homePageController.exportOsu();
+                pageController.exportOsuSync();
                 break;
             case 4:
-                homePageController.importOsu();
+                pageController.importOsuSync();
                 break;
             case 5:
-                homePageController.moreAbout();
+                pageController.moreOsuSync();
+                break;
+            case 6:
+                pageController.homePage();
+                break;
+            case 7:
+                pageController.fileChooser();
                 break;
         }
     }

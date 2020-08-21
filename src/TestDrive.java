@@ -1,12 +1,23 @@
-public class TestDrive {
-//    Using MVC Pattern
-    public static void main(String[] args) {
-        ActivitySwitchModel.createModel();
-        HomePageController homePageController = new HomePageController();
+import View.OsuSyncView;
+import View.ViewFactory;
 
-        HomePageView homePageView = new HomePageView(homePageController);
-        homePageView.createView();
-//        ImportView importView = new ImportView(homePageController);
+public class TestDrive {
+    //    Using MVC Pattern
+    public static void main(String[] args) {
+//        Model.ActivitySwitchModel.createModel();
+//        Controller.HomePageController homePageController = new Controller.HomePageController();
+
+//        HomePageView homePageView = new HomePageView(homePageController);
+//        homePageView.createView();
+
+//        Controller.ImportController importController = new Controller.ImportController();
+//        ImportView importView = new ImportView(importController);
 //        importView.createView();
+
+        ViewFactory viewFactory = new ViewFactory();
+
+        OsuSyncView.createOsuSyncView();
+        OsuSyncView.changePanel(viewFactory.getHomePage());
+
     }
 }
