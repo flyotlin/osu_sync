@@ -11,7 +11,6 @@ public class OsuSyncCopier {
     public OsuSyncCopier(File source, File dest) {
         this.source = source;
         this.dest = dest;
-
         copyDirectory(source, dest);
     }
 
