@@ -1,22 +1,24 @@
 package Controller;
 
+import Model.OsuSyncWriter;
 import View.OsuSyncView;
 
 public class HomePageController extends AbstractController {
-
+    private OsuSyncWriter writer = new OsuSyncWriter();
 
     @Override
     public void fileChooser() {
         throw new UnsupportedOperationException("The Operation is now unsupported");
     }
 
-
     public void initOsuSync() {
-        throw new UnsupportedOperationException("The Operation is now unsupported");
+        writer.createOsuSync();
+        System.out.println("INIT");
     }
 
     public void updateOsuSync() {
-        throw new UnsupportedOperationException("The Operation is now unsupported");
+        writer.writeToOsuSync();
+        System.out.println("UPDATE");
     }
 
     public void checkOsuSync() {
