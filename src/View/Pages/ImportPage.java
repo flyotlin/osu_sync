@@ -18,7 +18,7 @@ public class ImportPage extends AbstractPage {
         pagePanel.setLayout(new BoxLayout(pagePanel, BoxLayout.Y_AXIS));
         JLabel osusyncCaption = new JLabel(importStr);
         JButton[] mainButton = {
-                new JButton("選擇"), new JButton("匯入"), new JButton("回主畫面")
+                new JButton("選擇"), new JButton("選擇"), new JButton("匯入"), new JButton("回主畫面")
         };
         pagePanel.add(osusyncCaption);
 
@@ -26,11 +26,20 @@ public class ImportPage extends AbstractPage {
         ImportController importController = new ImportController();
         ButtonListenerFactory[] listenerFactories = {
                 new ButtonListenerFactory(importController, 7),
+                new ButtonListenerFactory(importController, 7),
                 new ButtonListenerFactory(importController, 4),
                 new ButtonListenerFactory(importController, 6),
         };
+        JLabel osuSyncLabel = new JLabel("選擇OSU SYNCE檔案:");
+        JLabel osuSongLabel = new JLabel("選擇OSU歌曲資料夾:");
 
         for (int i = 0; i < mainButton.length; i++) {
+            if (i == 0) {
+                pagePanel.add(osuSyncLabel);
+            }
+            if (i == 1) {
+                pagePanel.add(osuSongLabel);
+            }
             pagePanel.add(mainButton[i]);
             mainButton[i].addActionListener(listenerFactories[i]);
         }

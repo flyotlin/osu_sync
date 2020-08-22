@@ -3,7 +3,6 @@ package Model;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
 
 public class OsuSyncWriter {
     private String name;
@@ -34,7 +33,7 @@ public class OsuSyncWriter {
     private void createOsuSyncFile() {
         try {
             File parent = new File(osuSync.getParent());
-            if(parent.exists()) {
+            if (parent.exists()) {
                 osuSync.createNewFile();
             } else {
                 throw new IOException("Parent does not exist!");
@@ -48,7 +47,7 @@ public class OsuSyncWriter {
         try {
             File directory = new File(song_pathname);
             FileWriter writer = new FileWriter(osuSync);
-            for(String i : directory.list()) {
+            for (String i : directory.list()) {
                 File tmp = new File(song_pathname + i);
                 if (tmp.isDirectory()) {
                     writer.write(i);
