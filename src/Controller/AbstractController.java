@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.OsuSyncFileChooser;
 import View.OsuSyncView;
 import View.ViewFactory;
 
@@ -20,8 +21,8 @@ public abstract class AbstractController {
 
     public abstract void moreOsuSync();
 
-    public void fileChooser() {
-
+    public void fileChooser(boolean isFile) {
+        OsuSyncFileChooser fileChooser = new OsuSyncFileChooser(isFile);
     }
 
     public void homePage() {

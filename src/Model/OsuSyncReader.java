@@ -20,9 +20,9 @@ public class OsuSyncReader {
         try {
             FileReader fr = new FileReader(source);
             BufferedReader br = new BufferedReader(fr);
-            while(br.ready()) {
+            while (br.ready()) {
                 String tmp = br.readLine();
-                if(tmp.length() != 0) {
+                if (tmp.length() != 0) {
                     osuSongs.add(tmp);
                 }
             }

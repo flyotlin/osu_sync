@@ -10,10 +10,17 @@ public class ButtonListenerFactory implements ActionListener {
 
     private AbstractController pageController;
     private int num;
+    private boolean isFile = true;
 
     public ButtonListenerFactory(AbstractController pageController, int num) {
         this.pageController = pageController;
         this.num = num;
+    }
+
+    public ButtonListenerFactory(AbstractController pageController, int num, boolean isFile) {
+        this.pageController = pageController;
+        this.num = num;
+        this.isFile = isFile;
     }
 
     @Override
@@ -41,7 +48,7 @@ public class ButtonListenerFactory implements ActionListener {
                 pageController.homePage();
                 break;
             case 7:
-                pageController.fileChooser();
+                pageController.fileChooser(isFile);
                 break;
         }
     }

@@ -37,4 +37,8 @@ public class OsuSyncView {
         viewFrame.setVisible(true);
     }
 
+    public static JFrame getViewFrame() {
+        return viewFrame;
+    }
+
 }

@@ -7,7 +7,7 @@ public class HomePageController extends AbstractController {
     private OsuSyncWriter writer = new OsuSyncWriter();
 
     @Override
-    public void fileChooser() {
+    public void fileChooser(boolean isFile) {
         throw new UnsupportedOperationException("The Operation is now unsupported");
     }
 
