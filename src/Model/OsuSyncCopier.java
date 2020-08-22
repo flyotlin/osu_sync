@@ -8,9 +8,6 @@ public class OsuSyncCopier {
     private File source;
     private File dest;
 
-    private String oldPath;
-    private String newPath;
-
     public OsuSyncCopier(File source, File dest) {
         this.source = source;
         this.dest = dest;
