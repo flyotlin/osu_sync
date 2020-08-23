@@ -1,5 +1,7 @@
 package View;
 
+import View.Pages.AbstractPage;
+
 import javax.swing.*;
 
 public class OsuSyncView {
@@ -11,6 +13,8 @@ public class OsuSyncView {
     private final int WIDTH = 640;
     private final int HEIGHT = 400;
 
+    public static AbstractPage abstractPage;
+
     private OsuSyncView() {
         initFrame();
     }
@@ -21,7 +25,10 @@ public class OsuSyncView {
         }
     }
 
-    public static void changePanel(JPanel panel) {
+    public static void changePanel(AbstractPage page) {
+        abstractPage = page;
+        JPanel panel = page.getPage();
+
 //        prevent repeat currentPanel be added
         viewFrame.remove(currentPanel);
 

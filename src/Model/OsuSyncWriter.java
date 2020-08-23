@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class OsuSyncWriter {
-    private String name;
     private String username;
     private String filename;
     private String pathname;
@@ -17,9 +16,8 @@ public class OsuSyncWriter {
     }
 
     private void initPath() {
-        name = "hplaptop";
         username = System.getProperty("user.name");
-        filename = name + "." + username + ".osusync";
+        filename = username + ".osusync";
         pathname = "C:/Users/" + username + "/AppData/Local/osu!/";
         song_pathname = pathname + "Songs/";
         osuSync = new File(pathname + filename);

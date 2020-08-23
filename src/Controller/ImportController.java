@@ -5,6 +5,9 @@ import Model.OsuSyncCopier;
 import java.io.File;
 
 public class ImportController extends AbstractController {
+//    public ImportController() {
+//        super();
+//    }
 
     @Override
     public void initOsuSync() {

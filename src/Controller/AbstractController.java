@@ -21,8 +21,11 @@ public abstract class AbstractController {
 
     public abstract void moreOsuSync();
 
-    public void fileChooser(boolean isFile) {
-        OsuSyncFileChooser fileChooser = new OsuSyncFileChooser(isFile);
+    public void fileChooser(boolean isFile, int option) {
+        OsuSyncFileChooser fileChooser = new OsuSyncFileChooser(isFile, option);
+        fileChooser.removeObservers();
+        fileChooser.registerObserver(OsuSyncView.abstractPage);
+        fileChooser.initFileChooser();
     }
 
     public void homePage() {

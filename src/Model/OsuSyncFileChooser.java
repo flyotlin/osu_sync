@@ -11,14 +11,15 @@ import java.io.File;
 public class OsuSyncFileChooser implements OsuSyncObservable {
     private JFileChooser fileChooser;
     private boolean isFile;
+    private int option;
 
-    public OsuSyncFileChooser(boolean isFile) {
+    public OsuSyncFileChooser(boolean isFile, int option) {
         fileChooser = new JFileChooser();
         this.isFile = isFile;
-        initFileChooser();
+        this.option = option;
     }
 
-    private void initFileChooser() {
+    public void initFileChooser() {
         fileChooser.setFileHidingEnabled(false);
         if (!isFile) {
             fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
@@ -30,7 +31,7 @@ public class OsuSyncFileChooser implements OsuSyncObservable {
         int returnVal = fileChooser.showOpenDialog(OsuSyncView.getViewFrame());
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = fileChooser.getSelectedFile();
-            System.out.println(file.getPath());
+            notifyObservers(file.getPath());
         }
     }
 
@@ -40,7 +41,14 @@ public class OsuSyncFileChooser implements OsuSyncObservable {
     }
 
     @Override
-    public void notifyObservers() {
+    public void removeObservers() {
+        observerPages.clear();
+    }
 
+    @Override
+    public void notifyObservers(String path) {
+        for (ObserverPage page : observerPages) {
+            page.update(path, option);
+        }
     }
 }

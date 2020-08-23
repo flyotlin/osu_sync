@@ -9,5 +9,7 @@ public interface OsuSyncObservable {
 
     void registerObserver(ObserverPage o);
 
-    void notifyObservers();
+    void removeObservers();
+
+    void notifyObservers(String path);
 }
