@@ -8,12 +8,7 @@ import View.ViewFactory;
 public abstract class AbstractController {
     ViewFactory viewFactory = new ViewFactory();
 
-
-    public abstract void initOsuSync();
-
-    public abstract void updateOsuSync();
-
-    public abstract void checkOsuSync();
+    public abstract void getOsuSync();
 
     public abstract void exportOsuSync();
 

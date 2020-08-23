@@ -7,17 +7,7 @@ import java.io.File;
 
 public class ImportController extends AbstractController {
     @Override
-    public void initOsuSync() {
-        throw new UnsupportedOperationException("The Operation is now unsupported");
-    }
-
-    @Override
-    public void updateOsuSync() {
-        throw new UnsupportedOperationException("The Operation is now unsupported");
-    }
-
-    @Override
-    public void checkOsuSync() {
+    public void getOsuSync() {
         throw new UnsupportedOperationException("The Operation is now unsupported");
     }
 

@@ -1,9 +1,6 @@
 package View;
 
-import View.Pages.AbstractPage;
-import View.Pages.ExportPage;
-import View.Pages.HomePage;
-import View.Pages.ImportPage;
+import View.Pages.*;
 
 public class ViewFactory {
     public ViewFactory() {
@@ -14,8 +11,8 @@ public class ViewFactory {
         return new HomePage();
     }
 
-    public AbstractPage getCheckPage() {
-        return new HomePage();
+    public AbstractPage getOsuSyncPage() {
+        return new GetOsuSyncPage();
     }
 
     public AbstractPage getImportPage() {

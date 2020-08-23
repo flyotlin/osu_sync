@@ -15,6 +15,14 @@ public class OsuSyncWriter {
         initPath();
     }
 
+    public OsuSyncWriter(String songDirect, String osuSyncDest) {
+        username = System.getProperty("user.name");
+        filename = username + ".osusync";
+        pathname = osuSyncDest;
+        song_pathname = songDirect + "/";
+        osuSync = new File(pathname + "\\" + filename);
+    }
+
     private void initPath() {
         username = System.getProperty("user.name");
         filename = username + ".osusync";

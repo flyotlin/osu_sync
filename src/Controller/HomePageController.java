@@ -11,16 +11,9 @@ public class HomePageController extends AbstractController {
         throw new UnsupportedOperationException("The Operation is now unsupported");
     }
 
-    public void initOsuSync() {
-        writer.createOsuSync();
-    }
-
-    public void updateOsuSync() {
-        writer.writeToOsuSync();
-    }
-
-    public void checkOsuSync() {
-        throw new UnsupportedOperationException("The Operation is now unsupported");
+    @Override
+    public void getOsuSync() {
+        OsuSyncView.changePanel(viewFactory.getOsuSyncPage());
     }
 
     @Override

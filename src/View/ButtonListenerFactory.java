@@ -7,15 +7,13 @@ import java.awt.event.ActionListener;
 
 public class ButtonListenerFactory implements ActionListener {
 //    Using Factory Pattern
+    public static final int GET_OSUSYNC = 0;
+    public static final int EXPORT_OSUSYNC = 1;
+    public static final int IMPORT_OSUSYNC = 2;
+    public static final int MORE_OSUSYNC = 3;
+    public static final int TO_HOMEPAGE = 4;
+    public static final int FILE_CHOOSER = 5;
 
-    public static final int INIT_OSUSYNC = 0;
-    public static final int UPDATE_OSUSYNC = 1;
-    public static final int CHECK_OSUSYNC = 2;
-    public static final int EXPORT_OSUSYNC = 3;
-    public static final int IMPORT_OSUSYNC = 4;
-    public static final int MORE_OSUSYNC = 5;
-    public static final int TO_HOMEPAGE = 6;
-    public static final int FILE_CHOOSER = 7;
 
     private AbstractController pageController;
     private int num;
@@ -37,14 +35,8 @@ public class ButtonListenerFactory implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (num) {
-            case INIT_OSUSYNC:
-                pageController.initOsuSync();
-                break;
-            case UPDATE_OSUSYNC:
-                pageController.updateOsuSync();
-                break;
-            case CHECK_OSUSYNC:
-                pageController.checkOsuSync();
+            case GET_OSUSYNC:
+                pageController.getOsuSync();
                 break;
             case EXPORT_OSUSYNC:
                 pageController.exportOsuSync();
