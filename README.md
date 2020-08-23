@@ -5,6 +5,10 @@ Osu players who change computer or have two computers switching frequently can u
 ## 緣起
 想方便更新osu歌曲資料，順便練習設計模式。
 ## 使用方式(Usage)
+**注意:** 執行osu_sync.jar需要**jdk 14.02**
+
+**NOTICE:** You need **jdk 14.02** to execute osu_sync.jar
+
 情境:同步A電腦的歌曲至B電腦。
 
 Scenario: sync the songs in Computer A to Computer B
