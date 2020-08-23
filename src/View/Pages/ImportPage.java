@@ -20,7 +20,7 @@ public class ImportPage extends AbstractPage {
     private void initComponent() {
         osuSongSourceLabel = new JLabel("選擇OSU歌曲來源資料夾:");
         osuSongDestLabel = new JLabel("選擇OSU歌曲目的資料夾:");
-        osuSongSource = new JLabel("");
+        osuSongSource = new JLabel("(尚未選擇)");
         osuSongDest = new JLabel(AbstractPage.osuSongDirectory);
     }
 

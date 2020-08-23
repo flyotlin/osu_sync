@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.OsuSyncExportWizzard;
+
 public class ExportController extends AbstractController {
     @Override
     public void initOsuSync() {
@@ -18,7 +20,10 @@ public class ExportController extends AbstractController {
 
     @Override
     public void exportOsuSync() {
+        System.out.println("START EXPORTING");
 
+        OsuSyncExportWizzard wizzard = new OsuSyncExportWizzard();
+        wizzard.startCopy();
     }
 
     @Override

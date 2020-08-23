@@ -6,10 +6,6 @@ import View.Pages.ImportPage;
 import java.io.File;
 
 public class ImportController extends AbstractController {
-//    public ImportController() {
-//        super();
-//    }
-
     @Override
     public void initOsuSync() {
         throw new UnsupportedOperationException("The Operation is now unsupported");
@@ -38,6 +34,7 @@ public class ImportController extends AbstractController {
         File dest = new File(songDest);
 
         OsuSyncCopier copier = new OsuSyncCopier(source, dest);
+        copier.startCopy();
     }
 
     @Override
