@@ -19,22 +19,19 @@ public class ImportPage extends AbstractPage {
         JLabel osusyncCaption = new JLabel(importStr);
         JButton[] mainButton = {
                 new JButton("選擇"), new JButton("選擇"),
-                new JButton("選擇"), new JButton("匯入"),
-                new JButton("回主畫面")
+                new JButton("匯入"), new JButton("回主畫面")
         };
         pagePanel.add(osusyncCaption);
 
         ImportController importController = new ImportController();
         ButtonListenerFactory[] listenerFactories = {
-                new ButtonListenerFactory(importController, 7),
-                new ButtonListenerFactory(importController, 7, false),
-                new ButtonListenerFactory(importController, 7, false),
-                new ButtonListenerFactory(importController, 4),
-                new ButtonListenerFactory(importController, 6),
+                new ButtonListenerFactory(importController, ButtonListenerFactory.FILE_CHOOSER),
+                new ButtonListenerFactory(importController, ButtonListenerFactory.FILE_CHOOSER, false),
+                new ButtonListenerFactory(importController, ButtonListenerFactory.IMPORT_OSUSYNC),
+                new ButtonListenerFactory(importController, ButtonListenerFactory.TO_HOMEPAGE),
         };
         JLabel osuSyncLabel = new JLabel("選擇OSU SYNC檔案:");
         JLabel osuSongSourceLabel = new JLabel("選擇OSU歌曲來源資料夾:");
-        JLabel osuSongDestLabel = new JLabel("選擇OSU歌曲目的地資料夾:");
 
         for (int i = 0; i < mainButton.length; i++) {
             if (i == 0) {
@@ -42,9 +39,6 @@ public class ImportPage extends AbstractPage {
             }
             if (i == 1) {
                 pagePanel.add(osuSongSourceLabel);
-            }
-            if (i == 2) {
-                pagePanel.add(osuSongDestLabel);
             }
             pagePanel.add(mainButton[i]);
             mainButton[i].addActionListener(listenerFactories[i]);

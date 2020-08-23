@@ -25,10 +25,10 @@ public class ExportPage extends AbstractPage {
 
         ExportController exportController = new ExportController();
         ButtonListenerFactory[] listenerFactories = {
-                new ButtonListenerFactory(exportController, 7),
-                new ButtonListenerFactory(exportController, 7),
-                new ButtonListenerFactory(exportController, 3),
-                new ButtonListenerFactory(exportController, 6),
+                new ButtonListenerFactory(exportController, ButtonListenerFactory.FILE_CHOOSER),
+                new ButtonListenerFactory(exportController, ButtonListenerFactory.FILE_CHOOSER),
+                new ButtonListenerFactory(exportController, ButtonListenerFactory.EXPORT_OSUSYNC),
+                new ButtonListenerFactory(exportController, ButtonListenerFactory.TO_HOMEPAGE),
         };
 
         for (int i = 0; i < mainButton.length; i++) {

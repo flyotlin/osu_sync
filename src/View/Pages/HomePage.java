@@ -27,12 +27,12 @@ public class HomePage extends AbstractPage {
 
         AbstractController homePageController = new HomePageController();
         ButtonListenerFactory[] listenerFactories = {
-                new ButtonListenerFactory(homePageController, 0),
-                new ButtonListenerFactory(homePageController, 1),
-                new ButtonListenerFactory(homePageController, 2),
-                new ButtonListenerFactory(homePageController, 3),
-                new ButtonListenerFactory(homePageController, 4),
-                new ButtonListenerFactory(homePageController, 5),
+                new ButtonListenerFactory(homePageController, ButtonListenerFactory.INIT_OSUSYNC),
+                new ButtonListenerFactory(homePageController, ButtonListenerFactory.UPDATE_OSUSYNC),
+                new ButtonListenerFactory(homePageController, ButtonListenerFactory.CHECK_OSUSYNC),
+                new ButtonListenerFactory(homePageController, ButtonListenerFactory.EXPORT_OSUSYNC),
+                new ButtonListenerFactory(homePageController, ButtonListenerFactory.IMPORT_OSUSYNC),
+                new ButtonListenerFactory(homePageController, ButtonListenerFactory.MORE_OSUSYNC),
         };
 
         for (int i = 0; i < mainButton.length; i++) {
