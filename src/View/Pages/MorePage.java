@@ -24,7 +24,7 @@ public class MorePage extends AbstractPage {
         pagePanel.setLayout(new BoxLayout(pagePanel, BoxLayout.Y_AXIS));
         JLabel osusyncCaption = new JLabel(moreStr);
         JButton[] mainButton = {
-            new JButton("回主畫面")
+                new JButton("回主畫面")
         };
         pagePanel.add(osusyncCaption);
 
@@ -37,7 +37,7 @@ public class MorePage extends AbstractPage {
 
         ImportController importController = new ImportController();
         ButtonListenerFactory[] listenerFactories = {
-            new ButtonListenerFactory(importController, ButtonListenerFactory.TO_HOMEPAGE),
+                new ButtonListenerFactory(importController, ButtonListenerFactory.TO_HOMEPAGE),
         };
 
         for (int i = 0; i < mainButton.length; i++) {

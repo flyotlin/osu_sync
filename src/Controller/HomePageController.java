@@ -3,8 +3,6 @@ package Controller;
 import Model.OsuSyncWriter;
 import View.OsuSyncView;
 
-import javax.swing.*;
-
 public class HomePageController extends AbstractController {
     private OsuSyncWriter writer = new OsuSyncWriter();
 

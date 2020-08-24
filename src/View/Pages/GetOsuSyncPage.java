@@ -1,7 +1,6 @@
 package View.Pages;
 
 import Controller.GetOsuSyncController;
-import Controller.ImportController;
 import View.ButtonListenerFactory;
 
 import javax.swing.*;

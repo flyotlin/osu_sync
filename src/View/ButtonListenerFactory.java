@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ButtonListenerFactory implements ActionListener {
-//    Using Factory Pattern
+    //    Using Factory Pattern
     public static final int GET_OSUSYNC = 0;
     public static final int EXPORT_OSUSYNC = 1;
     public static final int IMPORT_OSUSYNC = 2;
