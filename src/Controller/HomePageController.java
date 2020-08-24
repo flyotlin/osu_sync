@@ -3,6 +3,8 @@ package Controller;
 import Model.OsuSyncWriter;
 import View.OsuSyncView;
 
+import javax.swing.*;
+
 public class HomePageController extends AbstractController {
     private OsuSyncWriter writer = new OsuSyncWriter();
 
@@ -28,6 +30,6 @@ public class HomePageController extends AbstractController {
 
     @Override
     public void moreOsuSync() {
-        throw new UnsupportedOperationException("The Operation is now unsupported");
+        OsuSyncView.changePanel(viewFactory.getMorePage());
     }
 }

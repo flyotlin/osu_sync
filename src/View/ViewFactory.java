@@ -24,6 +24,6 @@ public class ViewFactory {
     }
 
     public AbstractPage getMorePage() {
-        return new HomePage();
+        return new MorePage();
     }
 }
